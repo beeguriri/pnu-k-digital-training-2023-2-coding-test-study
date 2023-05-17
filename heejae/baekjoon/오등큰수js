@@ -1,0 +1,6 @@
+let [_, w] = require("fs").readFileSync(process.platform === 'linux' ? "/dev/stdin" : __dirname + "/input.txt").toString().split("\n")
+let t=w.split(' ')
+t.map(a=>t[a+'_']=(t[a+'_']|0)+1)
+w =w.split(' ')
+w=w.map((a,i)=>w.find((c,ci)=>t[a+'_']<t[c+'_']&i<ci)||-1)
+console.log(w.join(' '))

@@ -1,3 +1,4 @@
-4
-120 110 140 150
-485
+3
+21 Junkyu
+21 Dohyun
+20 Sunyoung

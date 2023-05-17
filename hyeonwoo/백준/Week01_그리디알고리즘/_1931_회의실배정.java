@@ -30,14 +30,14 @@ public class _1931_회의실배정 {
             list2.add(temp);
         }
 
-        // 정렬
+        // 정렬 종료시간을 기준으로 내림차순
         Collections.sort(list2, new Comparator<int[]>() {
             @Override
             public int compare(int[] o1, int[] o2) {
-                if(o1[0] == o2[0]) {
-                    return o1[1] - o2[1];
+                if(o1[1] == o2[1]) { // 종료시간 같으면 시작시간 오름차순
+                    return Integer.compare(o1[0] , o2[0]);
                 }
-                return o1[0] - o2[0];
+                return Integer.compare(o1[1] , o2[1]);
             }
         });
 
@@ -45,6 +45,16 @@ public class _1931_회의실배정 {
             System.out.print(list2.get(i)[0] + " ");
             System.out.println(list2.get(i)[1]);
         }
+
+
+        for (int i = 0; i < list2.size() - 1; i++) {
+            if(list2.get(i)[0] == list2.get(i+1)[0] ){
+                int a = list2.get(i)[1] - list2.get(i)[0];
+                int b = list2.get(i+1)[1] - list2.get(i+1)[0];
+//                if (a < b)
+            }
+        }
+
         
 //        // 중복제거
 //        for (int i = 0; i <list2.size() ; i++) {

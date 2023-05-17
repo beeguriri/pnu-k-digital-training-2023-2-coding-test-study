@@ -18,10 +18,10 @@ public class Stack_Queue {
         s.push(4);
         s.pop();
         // 스택의 최상단 원소부터 출력
-        while (!s.empty()) {
-            System.out.println(s.peek());
-            s.pop();
-        }
+//        while (!s.empty()) {
+//            System.out.println(s.peek());
+//            s.pop();
+//        }
         
         // 큐 생성 링크드 리스트
         Queue<Integer> q = new LinkedList<>();
@@ -33,9 +33,9 @@ public class Stack_Queue {
         q.offer(1);
         q.offer(4);
         q.poll();
-//        while(!q.isEmpty()){
-//            System.out.print(q.poll()+ " ");
-//        }
+        while(!q.isEmpty()){
+            System.out.print(q.poll()+ " ");
+        }
 
         // 큐 생성 어레이디큐
         Queue<Integer> q1 = new ArrayDeque<>();
